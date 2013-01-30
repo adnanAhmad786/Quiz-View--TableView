@@ -55,12 +55,7 @@
         [self.trueButton setImage:[UIImage imageNamed:@"friend_unselected"] forState: UIControlStateNormal];
 
     }
-    else{
-    
-        [self.falseButton setImage:[UIImage imageNamed:@"friend_unselected"] forState:UIControlStateNormal];
-        [self.trueButton setImage:[UIImage imageNamed:@"friend_unselected"] forState: UIControlStateNormal];
-    }
-    
+        
 }
 
 - (IBAction)trueButtonPressed:(id)sender {
