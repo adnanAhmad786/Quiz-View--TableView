@@ -43,6 +43,8 @@
 
 -(void)updateCellWithData:(QuestionDTO*)data{
 
+    
+    self.question.text=data.question;
     if (data.isTrue) {
         
         [self.falseButton setImage:[UIImage imageNamed:@"friend_unselected"] forState:UIControlStateNormal];
