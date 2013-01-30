@@ -10,4 +10,9 @@
 
 @interface QuestionDTO : NSObject
 
+@property(nonatomic,retain)NSString *question;
+@property(nonatomic,assign)BOOL isTrue;
+@property(nonatomic,assign)BOOL isFalse;
+
++(id)initWithQuestion:(NSDictionary *)data;
 @end

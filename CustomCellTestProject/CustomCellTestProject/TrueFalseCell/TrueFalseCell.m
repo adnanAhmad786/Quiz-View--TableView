@@ -41,21 +41,35 @@
     return cell;
 }
 
--(void)updateCellWithData:(QuestionDTO *)ticket{
+-(void)updateCellWithData:(QuestionDTO*)data{
 
+    if (data.isTrue) {
+        
+        [self.falseButton setImage:[UIImage imageNamed:@"friend_unselected"] forState:UIControlStateNormal];
+        [self.trueButton setImage:[UIImage imageNamed:@"friend_selected"] forState: UIControlStateNormal];
+
+    }else if(data.isFalse){
+    
+        
+        [self.falseButton setImage:[UIImage imageNamed:@"friend_selected"] forState:UIControlStateNormal];
+        [self.trueButton setImage:[UIImage imageNamed:@"friend_unselected"] forState: UIControlStateNormal];
+
+    }
+    else{
+    
+        [self.falseButton setImage:[UIImage imageNamed:@"friend_unselected"] forState:UIControlStateNormal];
+        [self.trueButton setImage:[UIImage imageNamed:@"friend_unselected"] forState: UIControlStateNormal];
+    }
+    
 }
 
 - (IBAction)trueButtonPressed:(id)sender {
     
-    [self.falseButton setImage:[UIImage imageNamed:@"friend_unselected"] forState:UIControlStateNormal];
-    [self.trueButton setImage:[UIImage imageNamed:@"friend_selected"] forState: UIControlStateNormal];
-    [(QuizVC *)owner trueButtonPressedAtIndexPath:indexPath];
+     [(QuizVC *)owner trueButtonPressedAtIndexPath:indexPath];
 }
 
 - (IBAction)falseButtonPressed:(id)sender {
     
-    [self.falseButton setImage:[UIImage imageNamed:@"friend_selected"] forState:UIControlStateNormal];
-    [self.trueButton setImage:[UIImage imageNamed:@"friend_unselected"] forState: UIControlStateNormal];
     [(QuizVC *)owner falseButtonPressedAtIndexPath:indexPath];
 }
 - (void)dealloc {

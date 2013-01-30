@@ -12,6 +12,7 @@
 
 +(id)initWithQuiz;
 
+@property(nonatomic,retain)NSMutableArray *quizArray;
 -(void)trueButtonPressedAtIndexPath:(NSIndexPath *)indexPath;
 -(void)falseButtonPressedAtIndexPath:(NSIndexPath *)indexPath;
 @end

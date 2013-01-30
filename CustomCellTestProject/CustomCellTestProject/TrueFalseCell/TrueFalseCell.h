@@ -18,7 +18,8 @@
 @property (retain, nonatomic) IBOutlet UIButton *falseButton;
 
 +(TrueFalseCell *)resuableCellForTableView:(UITableView *)tableview withOwner:(UIViewController *)owner;
--(void)updateCellWithData:(QuestionDTO*)ticket;
+-(void)updateCellWithData:(QuestionDTO*)data;
+
 - (IBAction)trueButtonPressed:(id)sender;
 - (IBAction)falseButtonPressed:(id)sender;
 
